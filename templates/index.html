@@ -12,7 +12,8 @@
 
 <body>
  <div class="login">
-	<h1>Prostate Tumour Type Predictor</h1>
+	<h1>Prostate Tumour Type Predictor by Qingboyuan(Brian) Wang</h1>
+     <h2>前列腺肿瘤性质预测程序<br>开发者：王庆博远</h2>
      <h3> Please enter the following values to predict the type of a prostate tumour<br>
      请输入前列腺肿块的特征来预测肿块性质</h3>
      <!-- Main Input For Receiving Query to our ML -->
@@ -24,9 +25,10 @@
         <input type="text" name="symmetry" placeholder="Symmetry/对称度" required="required" />
         <button type="submit" class="btn">Predict/预测</button>
     </form>
+     <p>** Also credit to Nakukl Lakhotia from Vellore Institute of Technology **</p>
    <br>
    <br>
-   {{ prediction_text }}
+   <p><b>Predicted Result:</b> {{ prediction_text }}</p>
  </div>
 </body>
 </html>
