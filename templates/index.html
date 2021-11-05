@@ -16,6 +16,7 @@
      <h2>前列腺肿瘤性质预测程序<br>开发者：王庆博远</h2>
      <h3> Please enter the following values to predict the type of a prostate tumour<br>
      请输入前列腺肿块的特征来预测肿块性质</h3>
+
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="radius" placeholder="Radius/肿瘤半径" required="required" />
@@ -27,8 +28,7 @@
     </form>
      <p>** Also credit to Nakukl Lakhotia from Vellore Institute of Technology **</p>
    <br>
-   <br>
-   <p><b>Predicted Result:</b> {{ prediction_text }}</p>
- </div>
+   <h3>Predicted Result: {{ prediction_text }}</h3>
+</div>
 </body>
 </html>
