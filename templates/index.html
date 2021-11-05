@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Prostate Tumour Type Predictor</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+ <div class="login">
+	<h1>Prostate Tumour Type Predictor</h1>
+     <h3> Please enter the following values to predict the type of a prostate tumour<br>
+     请输入前列腺肿块的特征来预测肿块性质</h3>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="radius" placeholder="Radius/肿瘤半径" required="required" />
+        <input type="text" name="area" placeholder="Area/肿瘤面积" required="required" />
+		<input type="text" name="smoothness" placeholder="Smoothness/表面平滑度" required="required" />
+        <input type="text" name="compactness" placeholder="Compactness/密实度" required="required" />
+        <input type="text" name="symmetry" placeholder="Symmetry/对称度" required="required" />
+        <button type="submit" class="btn">Predict/预测</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+ </div>
+</body>
+</html>
