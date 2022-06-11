@@ -18,7 +18,7 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
     output = prediction[0]
-    return render_template('index.html', prediction_text='It is possible that your prostate tumour is {}'.format(output))
+    return render_template('index.html', prediction_text='The prostate tumour is being predicted as {}'.format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)
